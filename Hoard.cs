@@ -1,15 +1,20 @@
-﻿namespace LootGenerator_Three_Five;
+﻿using System.Collections;
+
+namespace LootGenerator_Three_Five;
 
 public class Hoard
 {
     private int cp, sp, gp, pp = 0;
     private Random rnd = new Random();
+    private ArrayList stash = new ArrayList();
     public Hoard()
     {
         double cr = 1.0;
         int d = Dr(1,100);
         GenerateCoins(cr, 1.0, d);
+        d = Dr(1,100);
         GenerateTreasures(cr, 1.0, d);
+        d = Dr(1,100);
         GenerateItems(cr, 1.0, d);
     }
 
@@ -351,7 +356,51 @@ public class Hoard
 
     private void GenerateTreasures(double cr, double gemMult, int d100)
     {
-        
+        int gemloop = 0, artloop = 0;
+        switch (cr)
+        {
+            case 1.0:
+                if (d100 >= 91 && d100 <= 95)
+                {
+                    gemloop = (int)gemMult;
+                }
+
+                if (d100 >= 96)
+                {
+                    artloop = (int)gemMult;
+                }
+
+                break;
+            case 2.0:
+                if (d100 >= 82 && d100 <= 95)
+                {
+                    gemloop = (int)gemMult * Dr(1,3);
+                }
+
+                if (d100 >= 96)
+                {
+                    artloop = (int)gemMult * Dr(1,3);
+                }
+
+                break;
+            default:
+                break;
+        }
+
+        if (gemloop > 0)
+        {
+            for (int i = 0; i < gemloop; i++)
+            {
+                stash.Add(new Gem());
+            }
+        }
+        if (artloop > 0)
+        {
+            for (int i = 0; i < artloop; i++)
+            {
+                stash.Add(new Art());
+            }
+        }
     }
 
     private void GenerateItems(double cr, double itemMult, int d100)
