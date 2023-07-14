@@ -640,6 +640,7 @@ public class Hoard
 
     public override string ToString()
     {
+        double totalValue = (cp * .01) + (sp * .1) + (gp) + (pp * 10);
         string output = "";
         output += "Coins:";
         if (cp != 0)
@@ -663,11 +664,13 @@ public class Hoard
         }
 
         output += "\nItems:";
-        foreach (var item in stash)
+        foreach (Treasure item in stash)
         {
-            output += " " + item.ToString + ",";
+            output += " " + item.ToString() + ",";
+            totalValue += item.value();
         }
 
+        output += "\nTotal Value: " + totalValue + " gp.";
         return output;
     }
 }
