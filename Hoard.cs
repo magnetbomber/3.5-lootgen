@@ -387,6 +387,222 @@ public class Hoard
                 }
 
                 break;
+            case 3.0:
+                if (d100 >= 78 && d100 <= 95)
+                {
+                    gemloop = (int)gemMult * Dr(1,3);
+                }
+
+                if (d100 >= 96)
+                {
+                    artloop = (int)gemMult * Dr(1,3);
+                }
+
+                break;
+            case 4.0:
+                if (d100 >= 71 && d100 <= 95)
+                {
+                    gemloop = (int)gemMult * Dr(1,4);
+                }
+
+                if (d100 >= 96)
+                {
+                    artloop = (int)gemMult * Dr(1,3);
+                }
+
+                break;
+            case 5.0:
+                if (d100 >= 61 && d100 <= 95)
+                {
+                    gemloop = (int)gemMult * Dr(1,4);
+                }
+
+                if (d100 >= 96)
+                {
+                    artloop = (int)gemMult * Dr(1,4);
+                }
+
+                break;
+            case 6.0:
+                if (d100 >= 57 && d100 <= 92)
+                {
+                    gemloop = (int)gemMult * Dr(1,4);
+                }
+
+                if (d100 >= 93)
+                {
+                    artloop = (int)gemMult * Dr(1,4);
+                }
+
+                break;
+            case 7.0:
+                if (d100 >= 49 && d100 <= 88)
+                {
+                    gemloop = (int)gemMult * Dr(1,4);
+                }
+
+                if (d100 >= 89)
+                {
+                    artloop = (int)gemMult * Dr(1,4);
+                }
+
+                break;
+            case 8.0:
+                if (d100 >= 46 && d100 <= 85)
+                {
+                    gemloop = (int)gemMult * Dr(1,6);
+                }
+
+                if (d100 >= 86)
+                {
+                    artloop = (int)gemMult * Dr(1,4);
+                }
+
+                break;
+            case 9.0:
+                if (d100 >= 41 && d100 <= 80)
+                {
+                    gemloop = (int)gemMult * Dr(1,8);
+                }
+
+                if (d100 >= 81)
+                {
+                    artloop = (int)gemMult * Dr(1,4);
+                }
+
+                break;
+            case 10.0:
+                if (d100 >= 36 && d100 <= 79)
+                {
+                    gemloop = (int)gemMult * Dr(1,8);
+                }
+
+                if (d100 >= 80)
+                {
+                    artloop = (int)gemMult * Dr(1,6);
+                }
+
+                break;
+            case 11.0:
+                if (d100 >= 25 && d100 <= 74)
+                {
+                    gemloop = (int)gemMult * Dr(1,10);
+                }
+
+                if (d100 >= 75)
+                {
+                    artloop = (int)gemMult * Dr(1,6);
+                }
+
+                break;
+            case 12.0:
+                if (d100 >= 18 && d100 <= 70)
+                {
+                    gemloop = (int)gemMult * Dr(1,10);
+                }
+
+                if (d100 >= 71)
+                {
+                    artloop = (int)gemMult * Dr(1,8);
+                }
+
+                break;
+            case 13.0:
+                if (d100 >= 12 && d100 <= 66)
+                {
+                    gemloop = (int)gemMult * Dr(1,12);
+                }
+
+                if (d100 >= 67)
+                {
+                    artloop = (int)gemMult * Dr(1,10);
+                }
+
+                break;
+            case 14.0:
+                if (d100 >= 12 && d100 <= 66)
+                {
+                    gemloop = (int)gemMult * Dr(2,8);
+                }
+
+                if (d100 >= 67)
+                {
+                    artloop = (int)gemMult * Dr(2,6);
+                }
+
+                break;
+            case 15.0:
+                if (d100 >= 10 && d100 <= 65)
+                {
+                    gemloop = (int)gemMult * Dr(2,10);
+                }
+
+                if (d100 >= 66)
+                {
+                    artloop = (int)gemMult * Dr(2,8);
+                }
+
+                break;
+            case 16.0:
+                if (d100 >= 8 && d100 <= 64)
+                {
+                    gemloop = (int)gemMult * Dr(4,6);
+                }
+
+                if (d100 >= 65)
+                {
+                    artloop = (int)gemMult * Dr(2,10);
+                }
+
+                break;
+            case 17.0:
+                if (d100 >= 5 && d100 <= 63)
+                {
+                    gemloop = (int)gemMult * Dr(4,8);
+                }
+
+                if (d100 >= 64)
+                {
+                    artloop = (int)gemMult * Dr(3,8);
+                }
+
+                break;
+            case 18.0:
+                if (d100 >= 5 && d100 <= 54)
+                {
+                    gemloop = (int)gemMult * Dr(3,12);
+                }
+
+                if (d100 >= 55)
+                {
+                    artloop = (int)gemMult * Dr(3,10);
+                }
+
+                break;
+            case 19.0:
+                if (d100 >= 4 && d100 <= 50)
+                {
+                    gemloop = (int)gemMult * Dr(6,6);
+                }
+
+                if (d100 >= 51)
+                {
+                    artloop = (int)gemMult * Dr(6,6);
+                }
+
+                break;
+            case 20.0:
+                if (d100 >= 3 && d100 <= 38)
+                {
+                    gemloop = (int)gemMult * Dr(4,10);
+                }
+
+                if (d100 >= 39)
+                {
+                    artloop = (int)gemMult * Dr(7,6);
+                }
+
+                break;
             default:
                 break;
         }
