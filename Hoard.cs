@@ -22,7 +22,9 @@ public class Hoard
     {
         int d = Dr(1,100);
         GenerateCoins(cr, 1.0, d);
+        d = Dr(1,100);
         GenerateTreasures(cr, 1.0, d);
+        d = Dr(1,100);
         GenerateItems(cr, 1.0, d);
     }
 
@@ -31,7 +33,9 @@ public class Hoard
         
         int d = Dr(1,100);
         GenerateCoins(cr, coinMult, d);
+        d = Dr(1,100);
         GenerateTreasures(cr, gemMult, d);
+        d = Dr(1,100);
         GenerateItems(cr, itemMult, d);
     }
 
@@ -416,5 +420,38 @@ public class Hoard
             sum += rnd.Next(1, d + 1);
         }
         return sum;
+    }
+
+    public override string ToString()
+    {
+        string output = "";
+        output += "Coins:";
+        if (cp != 0)
+        {
+            output += " " + cp + " cp.";
+        }
+
+        if (sp != 0)
+        {
+            output += " " + sp + " sp.";
+        }
+
+        if (gp != 0)
+        {
+            output += " " + gp + " gp.";
+        }
+
+        if (pp != 0)
+        {
+            output += " " + pp + " pp.";
+        }
+
+        output += "\nItems:";
+        foreach (var item in stash)
+        {
+            output += " " + item.ToString + ",";
+        }
+
+        return output;
     }
 }
