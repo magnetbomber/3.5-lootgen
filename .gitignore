@@ -18,3 +18,6 @@ obj/LootGenerator Three Five.csproj.nuget.dgspec.json
 obj/rider.project.restore.info
 .idea/.idea.LootGenerator Three Five.dir/.idea/workspace.xml
 .idea/.idea.LootGenerator Three Five.dir/.idea/projectSettingsUpdater.xml
+bin/Debug/net6.0/LootGenerator Three Five.exe
+obj/Debug/net6.0/LootGenerator Three Five.AssemblyInfo.cs
+obj/Debug/net6.0/LootGenerator Three Five.GlobalUsings.g.cs
