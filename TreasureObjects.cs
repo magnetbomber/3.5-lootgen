@@ -7,6 +7,12 @@ public class Gem : Treasure
     private int v;
     private string desc;
     private Random rnd = new Random();
+    private string[] _tier5gems = {"clearest bright green emerald","blue-white diamond","canary diamond","pink diamond","brown diamond","blue diamond","jacinth"};
+    private string[] _tier4gems = {"emerald","white opal","black opal","fire opal","blue sapphire","fiery yellow corundum","rich purple corundum","blue star sapphire","black star sapphire","star ruby"};
+    private string[] _tier3gems = {"alexandrite","aquamarine","violet garnet","black pearl","deep blue spinel","golden yellow topaz"};
+    private string[] _tier2gems = {"amber","amethyst","chrysoberyl","coral","red garnet","brown-green garnet","jade","jet","white pearl","golden pearl","pink pearl","silver pearl","red spinel","red-brown spinel","deep green spinel","tourmaline"};
+    private string[] _tier1gems = {"bloodstone","carnelian","chalcedony","chrysoprase","citrine","iolite","jasper","moonstone","onyx","peridot","clear quartz","sard","sardonyx","rose quartz","smoky quartz","star rose quartz","zircon"};
+    private string[] _tier0gems = {"banded agate","eye agate","moss agate","azurite","blue quartz","hematite","lapis lazuli","malachite","obsidian","rhodochrosite","tiger eye turquoise","freshwater pearl"};
 
     public Gem()
     {
@@ -26,7 +32,39 @@ public class Gem : Treasure
 
     private string generateDesc(int tier)
     {
-        return "gem";
+        string output = "";
+        int i = 0;
+        switch (tier)
+        {
+            case 0:
+                i = rnd.Next(0, _tier0gems.Length);
+                output = _tier0gems[i];
+                break;
+            case 1:
+                i = rnd.Next(0, _tier1gems.Length);
+                output = _tier1gems[i];
+                break;
+            case 2:
+                i = rnd.Next(0, _tier2gems.Length);
+                output = _tier2gems[i];
+                break;
+            case 3:
+                i = rnd.Next(0, _tier3gems.Length);
+                output = _tier3gems[i];
+                break;
+            case 4:
+                i = rnd.Next(0, _tier4gems.Length);
+                output = _tier4gems[i];
+                break;
+            case 5:
+                i = rnd.Next(0, _tier5gems.Length);
+                output = _tier5gems[i];
+                break;
+            default:
+                output = "gem";
+                break;
+        }
+        return output;
     }
 
     private int generateValue(int tier)
