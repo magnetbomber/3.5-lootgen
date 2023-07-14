@@ -1,8 +1,11 @@
 ﻿namespace LootGenerator_Three_Five;
 
-public interface MagicItemInternal : Treasure
+public class MagicItemInternal : Treasure
 {
-    enum Tier
+    protected int v;
+    protected Tier tier;
+
+    public enum Tier
     {
         Mundane,
         Minor,
@@ -10,7 +13,15 @@ public interface MagicItemInternal : Treasure
         Major
     }
 
-    Tier getTier();
+    Tier getTier()
+    {
+        return tier;
+    }
+
+    public int value()
+    {
+        return 0;
+    }
 }
 
 public class MagicItem : Treasure

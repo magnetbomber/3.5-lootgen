@@ -1,21 +1,11 @@
 ﻿namespace LootGenerator_Three_Five;
 
-public interface MagicalEquipment : MagicItemInternal
+
+public class Armor : MagicItemInternal
 {
-    int enhancementBonus();
-}
-public class Armor : MagicalEquipment
-{
-    private int v = 0;
-    private MagicItemInternal.Tier tier;
     public int value()
     {
         return v;
-    }
-
-    public MagicItemInternal.Tier getTier()
-    {
-        return tier;
     }
 
     public int enhancementBonus()
@@ -23,18 +13,11 @@ public class Armor : MagicalEquipment
         return 0;
     }
 }
-public class Shield : MagicalEquipment
+public class Shield : MagicItemInternal
 {
-    private int v = 0;
-    private MagicItemInternal.Tier tier;
     public int value()
     {
         return v;
-    }
-
-    public MagicItemInternal.Tier getTier()
-    {
-        throw new NotImplementedException();
     }
 
     public int enhancementBonus()
@@ -42,18 +25,11 @@ public class Shield : MagicalEquipment
         return 0;
     }
 }
-public class Weapon : MagicalEquipment
+public class Weapon : MagicItemInternal
 {
-    private int v = 0;
-    private MagicItemInternal.Tier tier;
     public int value()
     {
         return v;
-    }
-
-    public MagicItemInternal.Tier getTier()
-    {
-        throw new NotImplementedException();
     }
 
     public int enhancementBonus()
@@ -63,17 +39,10 @@ public class Weapon : MagicalEquipment
 }
 public class Potion : MagicItemInternal
 {
-    private int v = 0;
-    private MagicItemInternal.Tier tier;
     private string spell;
     public int value()
     {
         return v;
-    }
-
-    public MagicItemInternal.Tier getTier()
-    {
-        throw new NotImplementedException();
     }
     public override string ToString()
     {
@@ -82,17 +51,10 @@ public class Potion : MagicItemInternal
 }
 public class Ring : MagicItemInternal
 {
-    private int v = 0;
-    private MagicItemInternal.Tier tier;
     private string name;
     public int value()
     {
         return v;
-    }
-
-    public MagicItemInternal.Tier getTier()
-    {
-        throw new NotImplementedException();
     }
     public override string ToString()
     {
@@ -101,18 +63,12 @@ public class Ring : MagicItemInternal
 }
 public class Rod : MagicItemInternal
 {
-    private int v = 0;
-    private MagicItemInternal.Tier tier;
     private string name;
     public int value()
     {
         return v;
     }
 
-    public MagicItemInternal.Tier getTier()
-    {
-        throw new NotImplementedException();
-    }
     public override string ToString()
     {
         return "Rod of " + name + " (" + value + " gp)";
@@ -120,34 +76,20 @@ public class Rod : MagicItemInternal
 }
 public class Scroll : MagicItemInternal
 {
-    private int v = 0;
-    private MagicItemInternal.Tier tier;
     private string scrollType;
     private string[] spells;
     public int value()
     {
         return v;
     }
-
-    public MagicItemInternal.Tier getTier()
-    {
-        throw new NotImplementedException();
-    }
 }
 public class Staff : MagicItemInternal
 {
-    private int v = 0;
     private int charges = 0;
-    private MagicItemInternal.Tier tier;
     private string name;
     public int value()
     {
         return v;
-    }
-
-    public MagicItemInternal.Tier getTier()
-    {
-        throw new NotImplementedException();
     }
     public override string ToString()
     {
@@ -156,9 +98,7 @@ public class Staff : MagicItemInternal
 }
 public class Wand : MagicItemInternal
 {
-    private int v = 0;
     private int charges = 0;
-    private MagicItemInternal.Tier tier;
     private string spell;
     public int value()
     {
@@ -169,25 +109,13 @@ public class Wand : MagicItemInternal
     {
         return "Wand of " + spell + " [" + charges + "/50 charges] (" + value + " gp)";
     }
-
-    public MagicItemInternal.Tier getTier()
-    {
-        throw new NotImplementedException();
-    }
 }
 public class WondrousItem : MagicItemInternal
 {
-    private int v = 0;
-    private MagicItemInternal.Tier tier;
     private string name;
     public int value()
     {
         return v;
-    }
-
-    public MagicItemInternal.Tier getTier()
-    {
-        throw new NotImplementedException();
     }
     public override string ToString()
     {
