@@ -40,9 +40,11 @@ public class Weapon : MagicItemInternal
 public class Potion : MagicItemInternal
 {
     private string spell;
+    private int casterLvl;
+    private int spellLvl;
     public int value()
     {
-        return v;
+        return 50 * casterLvl * spellLvl;
     }
     public override string ToString()
     {
@@ -78,9 +80,16 @@ public class Scroll : MagicItemInternal
 {
     private string scrollType;
     private string[] spells;
+    private int[] spellLvls;
+    private int[] casterLvls;
     public int value()
     {
-        return v;
+        int sum = 0;
+        for (int i = 0; i < spells.Length; i++)
+        {
+            sum += 25 * spellLvls[i] * casterLvls[i];
+        }
+        return sum;
     }
 }
 public class Staff : MagicItemInternal
@@ -100,9 +109,11 @@ public class Wand : MagicItemInternal
 {
     private int charges = 0;
     private string spell;
+    private int casterLvl;
+    private int spellLvl;
     public int value()
     {
-        return v;
+        return (int)(750 * spellLvl * casterLvl * (charges/50.0));
     }
 
     public override string ToString()
