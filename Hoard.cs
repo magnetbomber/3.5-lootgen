@@ -9,7 +9,7 @@ public class Hoard
         double cr = 1.0;
         int d = Dr(1,100);
         GenerateCoins(cr, 1.0, d);
-        GenerateGems(cr, 1.0, d);
+        GenerateTreasures(cr, 1.0, d);
         GenerateItems(cr, 1.0, d);
     }
 
@@ -17,7 +17,7 @@ public class Hoard
     {
         int d = Dr(1,100);
         GenerateCoins(cr, 1.0, d);
-        GenerateGems(cr, 1.0, d);
+        GenerateTreasures(cr, 1.0, d);
         GenerateItems(cr, 1.0, d);
     }
 
@@ -26,7 +26,7 @@ public class Hoard
         
         int d = Dr(1,100);
         GenerateCoins(cr, coinMult, d);
-        GenerateGems(cr, gemMult, d);
+        GenerateTreasures(cr, gemMult, d);
         GenerateItems(cr, itemMult, d);
     }
 
@@ -169,18 +169,176 @@ public class Hoard
 
                 break;
             case 8.0:
+                if (d100 >= 11 && d100 <= 15)
+                {
+                    cp = 10000 * Dr(1,12);
+                }
+                if (d100 >= 16 && d100 <= 29)
+                {
+                    sp = 1000 * Dr(2, 6);
+                }
+                if (d100 >= 30 && d100 <= 87)
+                {
+                    gp = 100 * Dr(2, 8);
+                }
+                if (d100 >= 88)
+                {
+                    pp = 10 * Dr(3, 6);
+                }
+
+                break;
             case 9.0:
+                if (d100 >= 11 && d100 <= 15)
+                {
+                    cp = 10000 * Dr(2,6);
+                }
+                if (d100 >= 16 && d100 <= 29)
+                {
+                    sp = 1000 * Dr(2, 8);
+                }
+                if (d100 >= 30 && d100 <= 85)
+                {
+                    gp = 100 * Dr(5, 4);
+                }
+                if (d100 >= 86)
+                {
+                    pp = 10 * Dr(2, 12);
+                }
+
+                break;
             case 10.0:
+                if (d100 >= 11 && d100 <= 24)
+                {
+                    sp = 1000 * Dr(2, 10);
+                }
+                if (d100 >= 25 && d100 <= 79)
+                {
+                    gp = 100 * Dr(6, 4);
+                }
+                if (d100 >= 80)
+                {
+                    pp = 10 * Dr(5, 6);
+                }
+
+                break;
             case 11.0:
+                if (d100 >= 9 && d100 <= 14)
+                {
+                    sp = 1000 * Dr(3, 10);
+                }
+                if (d100 >= 15 && d100 <= 75)
+                {
+                    gp = 100 * Dr(4, 8);
+                }
+                if (d100 >= 76)
+                {
+                    pp = 10 * Dr(4, 10);
+                }
+
+                break;
             case 12.0:
+                if (d100 >= 9 && d100 <= 14)
+                {
+                    sp = 1000 * Dr(3, 12);
+                }
+                if (d100 >= 15 && d100 <= 75)
+                {
+                    gp = 1000 * Dr(1, 4);
+                }
+                if (d100 >= 76)
+                {
+                    pp = 100 * Dr(1, 4);
+                }
+
+                break;
             case 13.0:
+                if (d100 >= 9 && d100 <= 75)
+                {
+                    gp = 1000 * Dr(1, 4);
+                }
+                if (d100 >= 76)
+                {
+                    pp = 100 * Dr(1, 10);
+                }
+
+                break;
             case 14.0:
+                if (d100 >= 9 && d100 <= 75)
+                {
+                    gp = 1000 * Dr(1, 6);
+                }
+                if (d100 >= 76)
+                {
+                    pp = 100 * Dr(1, 12);
+                }
+
+                break;
             case 15.0:
+                if (d100 >= 4 && d100 <= 74)
+                {
+                    gp = 1000 * Dr(1, 8);
+                }
+                if (d100 >= 75)
+                {
+                    pp = 100 * Dr(3, 4);
+                }
+
+                break;
             case 16.0:
+                if (d100 >= 4 && d100 <= 74)
+                {
+                    gp = 1000 * Dr(1, 12);
+                }
+                if (d100 >= 75)
+                {
+                    pp = 100 * Dr(3, 4);
+                }
+
+                break;
             case 17.0:
+                if (d100 >= 4 && d100 <= 68)
+                {
+                    gp = 1000 * Dr(3, 4);
+                }
+                if (d100 >= 69)
+                {
+                    pp = 100 * Dr(2, 10);
+                }
+
+                break;
             case 18.0:
+                if (d100 >= 3 && d100 <= 65)
+                {
+                    gp = 1000 * Dr(3, 6);
+                }
+                if (d100 >= 66)
+                {
+                    pp = 100 * Dr(5, 4);
+                }
+
+                break;
             case 19.0:
+                if (d100 >= 3 && d100 <= 65)
+                {
+                    gp = 1000 * Dr(3, 8);
+                }
+                if (d100 >= 66)
+                {
+                    pp = 100 * Dr(3, 10);
+                }
+
+                break;
             case 20.0:
+                if (d100 >= 3 && d100 <= 65)
+                {
+                    gp = 1000 * Dr(4, 8);
+                }
+                if (d100 >= 66)
+                {
+                    pp = 100 * Dr(4, 10);
+                }
+
+                break;
             default:
                 break;
         }
@@ -191,7 +349,7 @@ public class Hoard
         pp = (int)(coinMult * pp);
     }
 
-    private void GenerateGems(double cr, double gemMult, int d100)
+    private void GenerateTreasures(double cr, double gemMult, int d100)
     {
         
     }
