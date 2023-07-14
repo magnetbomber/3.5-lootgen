@@ -7,6 +7,7 @@ public class Gem : Treasure
     private int v;
     private string desc;
     private Random rnd = new Random();
+    
     private string[] _tier5gems = {"clearest bright green emerald","blue-white diamond","canary diamond","pink diamond","brown diamond","blue diamond","jacinth"};
     private string[] _tier4gems = {"emerald","white opal","black opal","fire opal","blue sapphire","fiery yellow corundum","rich purple corundum","blue star sapphire","black star sapphire","star ruby"};
     private string[] _tier3gems = {"alexandrite","aquamarine","violet garnet","black pearl","deep blue spinel","golden yellow topaz"};
@@ -29,7 +30,6 @@ public class Gem : Treasure
     {
         return desc + " (" + value() + " gp)";
     }
-
     private string generateDesc(int tier)
     {
         string output = "";
