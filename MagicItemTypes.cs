@@ -7,6 +7,7 @@ public interface MagicalEquipment : MagicItemInternal
 public class Armor : MagicalEquipment
 {
     private int v = 0;
+    private MagicItemInternal.Tier tier;
     public int value()
     {
         return v;
@@ -14,7 +15,7 @@ public class Armor : MagicalEquipment
 
     public MagicItemInternal.Tier getTier()
     {
-        throw new NotImplementedException();
+        return tier;
     }
 
     public int enhancementBonus()
@@ -25,6 +26,7 @@ public class Armor : MagicalEquipment
 public class Shield : MagicalEquipment
 {
     private int v = 0;
+    private MagicItemInternal.Tier tier;
     public int value()
     {
         return v;
@@ -43,6 +45,7 @@ public class Shield : MagicalEquipment
 public class Weapon : MagicalEquipment
 {
     private int v = 0;
+    private MagicItemInternal.Tier tier;
     public int value()
     {
         return v;
@@ -61,6 +64,8 @@ public class Weapon : MagicalEquipment
 public class Potion : MagicItemInternal
 {
     private int v = 0;
+    private MagicItemInternal.Tier tier;
+    private string spell;
     public int value()
     {
         return v;
@@ -69,11 +74,17 @@ public class Potion : MagicItemInternal
     public MagicItemInternal.Tier getTier()
     {
         throw new NotImplementedException();
+    }
+    public override string ToString()
+    {
+        return "Potion of " + spell + " (" + value + " gp)";
     }
 }
 public class Ring : MagicItemInternal
 {
     private int v = 0;
+    private MagicItemInternal.Tier tier;
+    private string name;
     public int value()
     {
         return v;
@@ -82,11 +93,17 @@ public class Ring : MagicItemInternal
     public MagicItemInternal.Tier getTier()
     {
         throw new NotImplementedException();
+    }
+    public override string ToString()
+    {
+        return "Ring of " + name + " (" + value + " gp)";
     }
 }
 public class Rod : MagicItemInternal
 {
     private int v = 0;
+    private MagicItemInternal.Tier tier;
+    private string name;
     public int value()
     {
         return v;
@@ -96,10 +113,17 @@ public class Rod : MagicItemInternal
     {
         throw new NotImplementedException();
     }
+    public override string ToString()
+    {
+        return "Rod of " + name + " (" + value + " gp)";
+    }
 }
 public class Scroll : MagicItemInternal
 {
     private int v = 0;
+    private MagicItemInternal.Tier tier;
+    private string scrollType;
+    private string[] spells;
     public int value()
     {
         return v;
@@ -114,6 +138,8 @@ public class Staff : MagicItemInternal
 {
     private int v = 0;
     private int charges = 0;
+    private MagicItemInternal.Tier tier;
+    private string name;
     public int value()
     {
         return v;
@@ -123,14 +149,25 @@ public class Staff : MagicItemInternal
     {
         throw new NotImplementedException();
     }
+    public override string ToString()
+    {
+        return "Staff of " + name + " [" + charges + "/50 charges] (" + value + " gp)";
+    }
 }
 public class Wand : MagicItemInternal
 {
     private int v = 0;
     private int charges = 0;
+    private MagicItemInternal.Tier tier;
+    private string spell;
     public int value()
     {
         return v;
+    }
+
+    public override string ToString()
+    {
+        return "Wand of " + spell + " [" + charges + "/50 charges] (" + value + " gp)";
     }
 
     public MagicItemInternal.Tier getTier()
@@ -141,6 +178,8 @@ public class Wand : MagicItemInternal
 public class WondrousItem : MagicItemInternal
 {
     private int v = 0;
+    private MagicItemInternal.Tier tier;
+    private string name;
     public int value()
     {
         return v;
@@ -149,5 +188,9 @@ public class WondrousItem : MagicItemInternal
     public MagicItemInternal.Tier getTier()
     {
         throw new NotImplementedException();
+    }
+    public override string ToString()
+    {
+        return name + " (" + value + " gp)";
     }
 }
