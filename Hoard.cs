@@ -150,6 +150,24 @@ public class Hoard
 
                 break;
             case 7.0:
+                if (d100 >= 12 && d100 <= 18)
+                {
+                    cp = 10000 * Dr(1,10);
+                }
+                if (d100 >= 19 && d100 <= 35)
+                {
+                    sp = 1000 * Dr(1, 12);
+                }
+                if (d100 >= 36 && d100 <= 93)
+                {
+                    gp = 100 * Dr(2, 6);
+                }
+                if (d100 >= 94)
+                {
+                    pp = 10 * Dr(3, 4);
+                }
+
+                break;
             case 8.0:
             case 9.0:
             case 10.0:
@@ -166,6 +184,11 @@ public class Hoard
             default:
                 break;
         }
+
+        cp = (int)(coinMult * cp);
+        sp = (int)(coinMult * sp);
+        gp = (int)(coinMult * gp);
+        pp = (int)(coinMult * pp);
     }
 
     private void GenerateGems(double cr, double gemMult, int d100)
