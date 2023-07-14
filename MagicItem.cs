@@ -9,6 +9,8 @@ public interface MagicItemInternal : Treasure
         Medium,
         Major
     }
+
+    Tier getTier();
 }
 
 public class MagicItem : Treasure

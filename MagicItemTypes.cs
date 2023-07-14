@@ -1,27 +1,61 @@
 ﻿namespace LootGenerator_Three_Five;
 
-public class Armor : MagicItemInternal
+public interface MagicalEquipment : MagicItemInternal
+{
+    int enhancementBonus();
+}
+public class Armor : MagicalEquipment
 {
     private int v = 0;
     public int value()
     {
         return v;
     }
+
+    public MagicItemInternal.Tier getTier()
+    {
+        throw new NotImplementedException();
+    }
+
+    public int enhancementBonus()
+    {
+        return 0;
+    }
 }
-public class Shield : MagicItemInternal
+public class Shield : MagicalEquipment
 {
     private int v = 0;
     public int value()
     {
         return v;
     }
+
+    public MagicItemInternal.Tier getTier()
+    {
+        throw new NotImplementedException();
+    }
+
+    public int enhancementBonus()
+    {
+        return 0;
+    }
 }
-public class Weapon : MagicItemInternal
+public class Weapon : MagicalEquipment
 {
     private int v = 0;
     public int value()
     {
         return v;
+    }
+
+    public MagicItemInternal.Tier getTier()
+    {
+        throw new NotImplementedException();
+    }
+
+    public int enhancementBonus()
+    {
+        return 0;
     }
 }
 public class Potion : MagicItemInternal
@@ -31,6 +65,11 @@ public class Potion : MagicItemInternal
     {
         return v;
     }
+
+    public MagicItemInternal.Tier getTier()
+    {
+        throw new NotImplementedException();
+    }
 }
 public class Ring : MagicItemInternal
 {
@@ -38,6 +77,11 @@ public class Ring : MagicItemInternal
     public int value()
     {
         return v;
+    }
+
+    public MagicItemInternal.Tier getTier()
+    {
+        throw new NotImplementedException();
     }
 }
 public class Rod : MagicItemInternal
@@ -47,6 +91,11 @@ public class Rod : MagicItemInternal
     {
         return v;
     }
+
+    public MagicItemInternal.Tier getTier()
+    {
+        throw new NotImplementedException();
+    }
 }
 public class Scroll : MagicItemInternal
 {
@@ -54,6 +103,11 @@ public class Scroll : MagicItemInternal
     public int value()
     {
         return v;
+    }
+
+    public MagicItemInternal.Tier getTier()
+    {
+        throw new NotImplementedException();
     }
 }
 public class Staff : MagicItemInternal
@@ -63,6 +117,11 @@ public class Staff : MagicItemInternal
     {
         return v;
     }
+
+    public MagicItemInternal.Tier getTier()
+    {
+        throw new NotImplementedException();
+    }
 }
 public class Wand : MagicItemInternal
 {
@@ -71,6 +130,11 @@ public class Wand : MagicItemInternal
     {
         return v;
     }
+
+    public MagicItemInternal.Tier getTier()
+    {
+        throw new NotImplementedException();
+    }
 }
 public class WondrousItem : MagicItemInternal
 {
@@ -78,5 +142,10 @@ public class WondrousItem : MagicItemInternal
     public int value()
     {
         return v;
+    }
+
+    public MagicItemInternal.Tier getTier()
+    {
+        throw new NotImplementedException();
     }
 }
