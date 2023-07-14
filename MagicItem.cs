@@ -72,4 +72,19 @@ public class MagicItem : Treasure
             
         }
     }
+
+    private void GMinorTable()
+    {
+        
+    }
+
+    private void GMediumTable()
+    {
+        
+    }
+
+    private void GMajorTable()
+    {
+        
+    }
 }
