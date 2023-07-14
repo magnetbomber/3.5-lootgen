@@ -113,6 +113,7 @@ public class Scroll : MagicItemInternal
 public class Staff : MagicItemInternal
 {
     private int v = 0;
+    private int charges = 0;
     public int value()
     {
         return v;
@@ -126,6 +127,7 @@ public class Staff : MagicItemInternal
 public class Wand : MagicItemInternal
 {
     private int v = 0;
+    private int charges = 0;
     public int value()
     {
         return v;
