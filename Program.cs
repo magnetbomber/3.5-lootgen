@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System;
 using LootGenerator_Three_Five;
 
 Console.WriteLine("Please enter a CR:");

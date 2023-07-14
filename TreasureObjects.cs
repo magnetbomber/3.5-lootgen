@@ -1,4 +1,6 @@
-﻿namespace LootGenerator_Three_Five;
+﻿using System;
+
+namespace LootGenerator_Three_Five;
 
 public class Gem : Treasure
 {
